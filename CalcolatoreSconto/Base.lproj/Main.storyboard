@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalcolatoreSconto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcolatore sconto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-X0-Pbp">
+                                <rect key="frame" x="87.5" y="83" width="239.5" height="31.5"/>
+                                <color key="backgroundColor" red="0.97944214519999995" green="1" blue="0.9347471034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inserisci il prezzo da scontare" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-WG-yet">
+                                <rect key="frame" x="94.5" y="142" width="225.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysh-eI-jdQ">
+                                <rect key="frame" x="150.5" y="178" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.53264102388967738" green="0.54978735929025191" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="PrezzoDaScontareTextfield_EditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Ibc-zO-4sm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inserisci lo sconto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-8f-BZT">
+                                <rect key="frame" x="138.5" y="216" width="137" height="20.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-64-8ZD">
+                                <rect key="frame" x="173" y="245" width="68.5" height="30"/>
+                                <color key="backgroundColor" red="0.53264102390000001" green="0.5497873593" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="ScontoPercentualeTextfield_EditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Hkq-pu-9xf"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkG-am-L7O">
+                                <rect key="frame" x="0.0" y="344" width="414" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lo sconto è di :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okW-ej-t0e">
+                                        <rect key="frame" x="151" y="0.0" width="112" height="16"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl1-AZ-hiU">
+                                        <rect key="frame" x="173.5" y="22" width="67" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-am-M6T">
+                                        <rect key="frame" x="240.5" y="22" width="16" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97944214519999995" green="1" blue="0.9347471034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="hHb-am-M6T" firstAttribute="centerY" secondItem="zkG-am-L7O" secondAttribute="centerY" id="0fQ-Pc-MXY"/>
+                                    <constraint firstItem="okW-ej-t0e" firstAttribute="centerX" secondItem="zkG-am-L7O" secondAttribute="centerX" id="AFk-YV-yD8"/>
+                                    <constraint firstItem="hHb-am-M6T" firstAttribute="centerY" secondItem="Tl1-AZ-hiU" secondAttribute="centerY" id="PSb-h7-lIH"/>
+                                    <constraint firstItem="Tl1-AZ-hiU" firstAttribute="top" secondItem="okW-ej-t0e" secondAttribute="bottom" constant="6" id="PjC-hx-18R"/>
+                                    <constraint firstItem="okW-ej-t0e" firstAttribute="top" secondItem="zkG-am-L7O" secondAttribute="top" id="PtP-Ms-1ga"/>
+                                    <constraint firstItem="Tl1-AZ-hiU" firstAttribute="width" secondItem="okW-ej-t0e" secondAttribute="width" multiplier="0.6" id="gx5-jr-Br6"/>
+                                    <constraint firstItem="hHb-am-M6T" firstAttribute="leading" secondItem="Tl1-AZ-hiU" secondAttribute="trailing" id="hav-C2-Bem"/>
+                                    <constraint firstItem="Tl1-AZ-hiU" firstAttribute="centerX" secondItem="zkG-am-L7O" secondAttribute="centerX" id="ofU-fH-DSb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as1-Uq-l4i">
+                                <rect key="frame" x="271.5" y="182.5" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJA-zR-vid">
+                                <rect key="frame" x="178.5" y="292" width="57" height="30"/>
+                                <color key="backgroundColor" red="0.92705144910000004" green="1" blue="0.98995508480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Calcola"/>
+                                <connections>
+                                    <action selector="CalcoatoreButton_touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSS-nj-B28"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-Ng-UT6">
+                                <rect key="frame" x="249" y="249.5" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4q-fM-BEi">
+                                <rect key="frame" x="249" y="250" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cy9-WG-yet" firstAttribute="top" secondItem="h6a-X0-Pbp" secondAttribute="bottom" constant="27.5" id="02P-SM-LEi"/>
+                            <constraint firstItem="aEF-Ng-UT6" firstAttribute="leading" secondItem="GBI-64-8ZD" secondAttribute="trailing" constant="7.5" id="0bg-Py-vvd"/>
+                            <constraint firstItem="YyV-8f-BZT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0mT-pf-Ffu"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="28u-Cz-UkG"/>
+                            <constraint firstItem="zJA-zR-vid" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2Ud-kN-wnx"/>
+                            <constraint firstItem="b4q-fM-BEi" firstAttribute="leading" secondItem="GBI-64-8ZD" secondAttribute="trailing" constant="7.5" id="6sf-nz-aC4"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AC7-4S-Z4q"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C0d-hx-1Jl"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="top" secondItem="zJA-zR-vid" secondAttribute="bottom" constant="22" id="Fi4-aP-AjY"/>
+                            <constraint firstItem="as1-Uq-l4i" firstAttribute="leading" secondItem="ysh-eI-jdQ" secondAttribute="trailing" constant="8" id="GWG-7h-CBm"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JZ9-xE-2Jh"/>
+                            <constraint firstItem="h6a-X0-Pbp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="KTU-bz-FUl"/>
+                            <constraint firstItem="ysh-eI-jdQ" firstAttribute="top" secondItem="Cy9-WG-yet" secondAttribute="bottom" constant="15.5" id="MdR-hq-kiC"/>
+                            <constraint firstItem="ysh-eI-jdQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PBS-Fr-Lvl"/>
+                            <constraint firstItem="as1-Uq-l4i" firstAttribute="centerY" secondItem="ysh-eI-jdQ" secondAttribute="centerY" id="QhP-vW-iah"/>
+                            <constraint firstItem="h6a-X0-Pbp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UiD-LF-ULM"/>
+                            <constraint firstItem="ysh-eI-jdQ" firstAttribute="width" secondItem="Cy9-WG-yet" secondAttribute="width" multiplier="0.5" id="VzX-wb-dwn"/>
+                            <constraint firstItem="Cy9-WG-yet" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="avQ-53-c2B"/>
+                            <constraint firstItem="zkG-am-L7O" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="elY-4e-Hbb"/>
+                            <constraint firstItem="GBI-64-8ZD" firstAttribute="width" secondItem="YyV-8f-BZT" secondAttribute="width" multiplier="0.5" id="oGq-IV-qCJ"/>
+                            <constraint firstItem="GBI-64-8ZD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pP2-se-rYw"/>
+                            <constraint firstItem="zJA-zR-vid" firstAttribute="top" secondItem="GBI-64-8ZD" secondAttribute="bottom" constant="17" id="pib-Vk-mYS"/>
+                            <constraint firstItem="aEF-Ng-UT6" firstAttribute="centerY" secondItem="GBI-64-8ZD" secondAttribute="centerY" id="ptl-uT-SJj"/>
+                            <constraint firstItem="GBI-64-8ZD" firstAttribute="top" secondItem="YyV-8f-BZT" secondAttribute="bottom" constant="8.5" id="qOL-Wv-EAV"/>
+                            <constraint firstItem="YyV-8f-BZT" firstAttribute="top" secondItem="ysh-eI-jdQ" secondAttribute="bottom" constant="8" id="rZs-hy-5vd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="CalcolaButton" destination="zJA-zR-vid" id="nQe-t9-p4q"/>
+                        <outlet property="RisultatoLabel" destination="Tl1-AZ-hiU" id="7cU-EM-Q6z"/>
+                        <outlet property="RisultatoView" destination="zkG-am-L7O" id="gxy-3d-lIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.89855072463769" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+</document>
